@@ -1,0 +1,17 @@
+# ETTh1 dataset specific configuration
+dataset:
+  name: "etth1"
+  seq_len: 24
+
+# Dataset-specific training adjustments
+training:
+  batch_size: 512
+  epochs: 5000
+
+# Wavelet settings optimized for ETTh1
+wavelet:
+  type: "db2"
+  levels: "auto"
+
+
+

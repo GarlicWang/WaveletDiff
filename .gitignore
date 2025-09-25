@@ -1,0 +1,8 @@
+__pycache__/
+*.csv
+*.arff
+*.mat
+*.ckpt
+*.npy
+*.err
+*.out

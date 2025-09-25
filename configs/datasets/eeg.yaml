@@ -1,0 +1,17 @@
+# EEG dataset specific configuration
+dataset:
+  name: "eeg"
+  seq_len: 24
+
+# Dataset-specific training adjustments
+training:
+  batch_size: 512
+  epochs: 5000
+
+# Wavelet settings optimized for EEG signals
+wavelet:
+  type: "db2"
+  levels: "auto"
+
+
+

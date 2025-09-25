@@ -1,0 +1,64 @@
+# Default configuration for WaveletDiff training
+# This file contains all hyperparameters and settings
+
+# Training configuration
+training:
+  epochs: 5000
+  batch_size: 512
+  save_model: true
+  
+# Model architecture (large size)
+model:
+  embed_dim: 256
+  num_heads: 8
+  num_layers: 8
+  time_embed_dim: 128
+  dropout: 0.1
+  prediction_target: "noise"  # "noise" or "coefficient"
+
+# Cross-level attention
+attention:
+  use_cross_level_attention: true
+
+# Energy term configuration
+energy:
+  weight: 0.0
+
+# Noise schedule
+noise:
+  schedule: "exponential"  # "cosine", "linear", "exponential"
+
+# Wavelet configuration
+wavelet:
+  type: "auto"  # "auto", "db2", "sym2", "coif1", "bior2.2", "rbio2.2", etc.
+  levels: "auto"  # Number of decomposition levels or "auto"
+
+# Sampling configuration
+sampling:
+  method: "ddpm"  # "ddpm" or "ddim"
+  ddim_eta: 0.0  # Stochasticity parameter for DDIM (0.0 = fully deterministic, 1.0 = DDPM-like)
+  ddim_steps: null  # Number of DDIM steps (null = use all 1000 steps, e.g., 50 = accelerated DDIM)
+
+# Data configuration
+data:
+  normalize_data: true
+  data_dir: "../data"
+
+# Optimizer and scheduler
+optimizer:
+  scheduler_type: "onecycle"  # "cosine_warmup", "plateau_warmup", "onecycle", "cosine", "plateau"
+  warmup_epochs: 50
+  lr: 0.0002
+
+# Dataset configuration (can be overridden by dataset-specific configs)
+dataset:
+  name: "etth1"
+  seq_len: 24
+
+# Evaluation configuration
+evaluation:
+  num_samples: 20000
+  
+# Output paths
+paths:
+  output_dir: "../outputs"
