@@ -1,5 +1,5 @@
 # WaveletDiff: Multilevel Wavelet Diffusion for Time Series Generation
-This repository contains code for the paper [WaveletDiff: Multilevel Wavelet Diffusion for Time Series Generation] (https://arxiv.org/abs/2510.11839)
+This repository contains code for the paper [WaveletDiff: Multilevel Wavelet Diffusion for Time Series Generation](https://arxiv.org/abs/2510.11839)
 
 ## Requirements
 
