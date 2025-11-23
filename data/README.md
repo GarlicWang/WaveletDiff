@@ -1,6 +1,6 @@
 # Dataset Directory
 
-This directory should contain the time series datasets used for training and evaluation of the WaveletDiff model. Please download the data through the given source and follow the structure below to place the dataset.
+This directory should contain the time series datasets used for training and evaluation of the WaveletDiff model.
 
 ## Directory Structure
 
@@ -8,8 +8,8 @@ This directory should contain the time series datasets used for training and eva
 data/
 ├── README.md                    # This file
 ├── ETT-small/                   # Electricity Transformer Temperature datasets
-│   ├── ETTh1.csv               # ETTh1 dataset
-│   └── ETTh2.csv               # ETTh2 dataset
+│   ├── ETTh1.csv                # ETTh1 dataset
+│   └── ETTh2.csv                # ETTh2 dataset
 ├── exchange_rate/               # Currency exchange rate data
 │   └── exchange_rate.txt
 ├── stocks/                      # Stock market data
