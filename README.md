@@ -113,3 +113,14 @@ This notebook supports the following metrics:
 - **Context-FID Score**: Context-aware Fréchet Inception Distance using TS2Vec embeddings (lower is better)
 - **Correlational Score**: Measures temporal correlation patterns between real and generated data (lower is better)
 - **DTW-JS Distance**: Dynamic Time Warping with Jensen-Shannon divergence for temporal alignment (lower is better)
+
+## Citation
+
+```bibtex
+@article{wang2025waveletdiff,
+    title={WaveletDiff: Multilevel Wavelet Diffusion For Time Series Generation}, 
+    author={Yu-Hsiang Wang and Olgica Milenkovic},
+    journal={arXiv preprint arXiv:2510.11839},
+    year={2025},
+}
+```
