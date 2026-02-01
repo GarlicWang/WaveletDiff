@@ -104,6 +104,7 @@ def load_exchange_rate_data(data_dir: str, seq_len: int = 24, normalize_data: bo
         raise FileNotFoundError(f"Exchange rate data not found at: {exchange_rate_path}")
 
     df = pd.read_csv(exchange_rate_path, header=None)
+    df.values[:, [-2, -1]] = df.values[:, [-1, -2]]     # align with the csv file used in baselines
     data, norm_stats = create_sliding_windows(df.values, seq_len=seq_len, stride=1, normalize=normalize_data)
     data = data.astype(np.float32)
     
